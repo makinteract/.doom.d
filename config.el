@@ -54,3 +54,16 @@
 
 ;; Customization starts here
 (setq web-search-default-provider "DuckDuckGo")
+
+(map! :ne "M-/" #'comment-or-uncomment-region)
+(map! :ne "SPC <f8>" #'visual-line-mode)
+;; (global-visual-line-mode 1)
+(setq auto-fill-mode nil)
+
+;; Processing
+(setq processing-location "~/Applications/processing/processing-java")
+(setq processing-application-dir "~/Applications/processing")
+(setq processing-sketchbook-dir "~/sketchbook")
+
+
+;; end
