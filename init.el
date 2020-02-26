@@ -14,6 +14,12 @@
 ;;      Alternatively, press 'gd' (or 'C-c g d') on a module to browse its
 ;;      directory (for easy access to its source code).
 
+;; FOR WINDOWS
+;; Modify the following line with the bdefault starting point
+(setq default-directory "C:/Users/Andrea")
+;; Install fonts by M-x all-the-icons-isntall-fonts
+;; then go to the folder in windows, right click the fonts and install them
+
 (doom! :input
        ;;chinese
        ;;japanese
