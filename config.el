@@ -28,11 +28,35 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
+(setq org-directory "~/Dropbox/")
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type 'relative)
+
+;; Logo
+(setq +doom-dashboard-banner-file (expand-file-name "logo.png" doom-private-dir))
+
+
+(after! org
+  (setq
+  ;org-ellipsis " ▾ "
+  ;org-bullets-bullet-list '("·")
+  org-todo-keywords '((sequence "TODO(t)" "INPROGRESS(i)" "|" "DONE(d)"))
+  org-log-done 'time
+  ;org-agenda-files (ignore-errors (directory-files +org-dir t "\\.org$" t))
+  ;(setq org-fancy-priorities-list '("⚡" "⬆" "⬇" "☕"))
+  ))
+
+
+
+
+
+
+
+
+
+
 
 
 ;; Here are some additional functions/macros that could help you configure Doom:
@@ -59,6 +83,9 @@
 (map! :ne "SPC <f8>" #'visual-line-mode)
 ;; (global-visual-line-mode 1)
 (setq auto-fill-mode nil)
+(remove-hook 'org-mode-hook #'auto-fill-mode)
+;;(remove-hook 'LaTeX-mode-hook #'auto-fill-mode)
+(turn-off-auto-fill)
 
 ;; Processing
 (setq processing-location "~/Applications/processing/processing-java")
