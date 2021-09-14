@@ -24,7 +24,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-dracula)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -33,9 +33,6 @@
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type 'relative)
-
-;; Logo
-(setq +doom-dashboard-banner-file (expand-file-name "logo.png" doom-private-dir))
 
 
 (after! org
@@ -47,16 +44,6 @@
   ;org-agenda-files (ignore-errors (directory-files +org-dir t "\\.org$" t))
   ;(setq org-fancy-priorities-list '("⚡" "⬆" "⬇" "☕"))
   ))
-
-
-
-
-
-
-
-
-
-
 
 
 ;; Here are some additional functions/macros that could help you configure Doom:
@@ -79,18 +66,10 @@
 ;; Customization starts here
 (setq web-search-default-provider "DuckDuckGo")
 
-(map! :ne "M-/" #'comment-or-uncomment-region)
+;;(map! :ne "M-/" #'comment-or-uncomment-region)
 (map! :ne "SPC <f8>" #'visual-line-mode)
 ;; (global-visual-line-mode 1)
 (setq auto-fill-mode nil)
 (remove-hook 'org-mode-hook #'auto-fill-mode)
 ;;(remove-hook 'LaTeX-mode-hook #'auto-fill-mode)
 (turn-off-auto-fill)
-
-;; Processing
-(setq processing-location "~/Applications/processing/processing-java")
-(setq processing-application-dir "~/Applications/processing")
-(setq processing-sketchbook-dir "~/sketchbook")
-
-
-;; end
