@@ -51,3 +51,4 @@
 
 
 (package! svelte-mode)
+(package! nyan-mode)

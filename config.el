@@ -73,3 +73,7 @@
 (remove-hook 'org-mode-hook #'auto-fill-mode)
 ;;(remove-hook 'LaTeX-mode-hook #'auto-fill-mode)
 (turn-off-auto-fill)
+
+;; nyan-cat
+(nyan-mode 1)
+'(nyan-wavy-trail t)
