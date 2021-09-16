@@ -52,3 +52,4 @@
 
 (package! svelte-mode)
 (package! nyan-mode)
+(package! undo-tree)

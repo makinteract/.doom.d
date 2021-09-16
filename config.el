@@ -7,7 +7,7 @@
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
 (setq user-full-name "Andrea Bianchi"
-      user-mail-address "andrea@makinteract.com")
+      user-mail-address "andrea@kaist.id")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -37,8 +37,8 @@
 
 (after! org
   (setq
-  ;org-ellipsis " ▾ "
-  ;org-bullets-bullet-list '("·")
+  org-ellipsis " ▾ "
+  ;org-bullets-bullet-list '(".")
   org-todo-keywords '((sequence "TODO(t)" "INPROGRESS(i)" "|" "DONE(d)"))
   org-log-done 'time
   ;org-agenda-files (ignore-errors (directory-files +org-dir t "\\.org$" t))
@@ -76,4 +76,7 @@
 
 ;; nyan-cat
 (nyan-mode 1)
-'(nyan-wavy-trail t)
+(setq nyan-wavy-trail 't)
+
+;; avi
+(setq avy-all-windows 'all-frames)
