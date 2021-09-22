@@ -37,10 +37,10 @@
 
 (after! org
   (setq
-  org-ellipsis " ▾ "
-  ;org-bullets-bullet-list '(".")
-  org-todo-keywords '((sequence "TODO(t)" "INPROGRESS(i)" "|" "DONE(d)"))
-  org-log-done 'time
+   org-ellipsis " ▾ "
+   org-bullets-bullet-list '("⦿")
+   org-todo-keywords '((sequence "TODO(t)" "INPROGRESS(i)" "|" "DONE(d)"))
+   org-log-done 'time
   ;org-agenda-files (ignore-errors (directory-files +org-dir t "\\.org$" t))
   ;(setq org-fancy-priorities-list '("⚡" "⬆" "⬇" "☕"))
   ))
